@@ -29,7 +29,9 @@ function AddSpace(rowStart,rowEnd,maxLength){
 	let rowText = "";
 	for (k = rowStart;k<=rowEnd;k++){
 		let Fieldtext = createEachFieldValue(k,rowEnd);
-		Fieldtext += " ".repeat((maxLength - Fieldtext.length)+4);
+		if(k!=rowEnd){
+			Fieldtext += " ".repeat((maxLength - Fieldtext.length)+4);
+		}
 		rowText += Fieldtext;
 		}
 	return rowText
