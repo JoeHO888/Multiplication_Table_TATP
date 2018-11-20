@@ -1,8 +1,10 @@
+
+
 function multiplyOverRangeOfTwoIntegers (start, end) {
 	if (start>end){
 		return null;
 	}
-	let text = "";
+	let multiplicationTable = "";
 	let tmp_text = "";
 	for (i = start;i<=end;i++){
 		for (j = start; j<=i;j++){
@@ -12,15 +14,15 @@ function multiplyOverRangeOfTwoIntegers (start, end) {
 			}
 		}
 		if (i!=end){
-			text+=tmp_text+"\n";
+			multiplicationTable+=tmp_text+"\n";
 		}else{
-			text+=tmp_text;
+			multiplicationTable+=tmp_text;
 		}
 		tmp_text = "";
 		
 	}
-	//console.log(text);
-    return text;
+
+    return multiplicationTable;
 }
 
 module.exports = multiplyOverRangeOfTwoIntegers;
