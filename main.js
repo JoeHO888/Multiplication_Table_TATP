@@ -1,7 +1,8 @@
 
-var multiplicationTable = "";
+
 function multiplyOverRangeOfTwoIntegers (start, end) {
-	let maxLength = createEachFieldValue(start,end).length;
+	let multiplicationTable = "";
+	let maxLength = createEachFieldValue(end,end).length;
 	if(!isInputValid(start,end)){
 		return null
 	}
@@ -28,7 +29,7 @@ function AddSpace(rowStart,rowEnd,maxLength){
 	let rowText = "";
 	for (k = rowStart;k<=rowEnd;k++){
 		let Fieldtext = createEachFieldValue(k,rowEnd);
-		Fieldtext += " ".repeat((maxLength - Fieldtext.length)+2);
+		Fieldtext += "  ".repeat((maxLength - Fieldtext.length)+2);
 		rowText += Fieldtext;
 		}
 	return rowText
