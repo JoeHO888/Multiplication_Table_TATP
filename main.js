@@ -18,7 +18,7 @@ function multiplyOverRangeOfTwoIntegers (start, end) {
 }
 
 function isInputValid(start,end){
-	return (start <= end && end<=1000)
+	return (start <= end && end<=1000 && start>=1)
 }
 
 function createEachFieldValue(i,j){
@@ -30,7 +30,6 @@ function AddSpace(rowStart,rowEnd,maxLength){
 	for (k = rowStart;k<=rowEnd;k++){
 		let Fieldtext = createEachFieldValue(k,rowEnd);
 		Fieldtext += " ".repeat((maxLength - Fieldtext.length)+4);
-		console.log(Fieldtext.length);
 		rowText += Fieldtext;
 		}
 	return rowText
